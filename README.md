@@ -1,15 +1,25 @@
+# Spring Boot + Elasticsearch Demo
 
-# FTP (File Transfer Protocol)
+A simple Spring Boot application that integrates with Elasticsearch using the official Java client.  
+It provides basic REST APIs to index and search `Student` documents.
 
-This repository is designed for the article available at [Establishing an FTP Server Using Docker and Accessing It via Spring Boot](https://medium.com/@gydamohaimeed/b9a87b389bb5). For detailed explanations and context, please refer to the article.
+---
 
-### Before Running the Application
+## 🧰 Tech Stack
 
-1. **Edit the Docker Compose File**: Open the `docker-compose.yml` file and locate the `volumes` section. Replace `/Users/gydaalmohaimeed/Documents/ftp` with the path to your desired directory on your host machine, ensuring you provide your own username in place of `gydaalmohaimeed`.
+- Java 21
+- Spring Boot 3.2
+- Elasticsearch 8.x
+- REST API
+- Maven
+- Docker (optional)
 
-2. **Run the Container**: Navigate to the project directory in the terminal. Then, execute the following command to start the FTP server container:
+---
 
+## 🚀 How to Run (Locally)
 
+### 1. Start Elasticsearch (Docker recommended)
 ```bash
-docker-compose up
- ```
+docker run -p 9200:9200 -e "discovery.type=single-node" \
+  -e "xpack.security.enabled=false" \
+  docker.elastic.co/elasticsearch/elasticsearch:8.13.4

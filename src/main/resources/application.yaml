@@ -1,9 +1,6 @@
-spring:
-  application:
-    name: ftp-spring-boot
+logging:
+  level:
+    org:
+      elasticsearch:
+#        client: INFO
 
-ftp:
-  host: localhost
-  port: 21
-  username: myuser
-  password: mypass
