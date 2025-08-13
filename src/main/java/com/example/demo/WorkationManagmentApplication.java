@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ElasticsearchApplication {
+public class WorkationManagmentApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(ElasticsearchApplication.class, args);
+		SpringApplication.run(WorkationManagmentApplication.class, args);
 	}
 }
